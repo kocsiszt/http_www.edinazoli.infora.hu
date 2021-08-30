@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="/base/icon-font.css" class="stylesheet">
+
+        <link rel="stylesheet" href="css/icon-font.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="shortcut icon" type="image/png" href="images/heart-icon-3346.png?v=2">
+        
+        <title>Wedding &mdash; 2020.November.28</title>
+    </head>
+    <body>
+
+        <div class="navigation">
+                <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+
+                <label for="navi-toggle" class="navigation__button" title="Forgatókönyv">
+                    <span class="navigation__icon">&nbsp;</span>
+                </label>
+            
+
+            <div class="navigation__background">&nbsp;</div>
+
+            <nav class="navigation__nav">
+                <ul class="navigation__list">
+                    <li class="navigation__item"><a href="#" class="navigation__link"><span>15:30</span>Vendégvárás</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link"><span>16:30</span>Kikérés</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link"><span>17:00</span>Esküvő</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link"><span>19:30</span>Vacsora</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link"><span>00:05</span>Menyasszonytánc</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link"><span>06:00</span>Hajnalig buli</a></li>
+                </ul>
+            </nav>
+        </div>
+
+
+
+
+        <header class="header">
+            <div class="header__logo-box">
+                <img src="/images/weddding2.png" alt="Logo" class="header__logo">
+            </div>
+
+
+        <div class="header__text-box">
+            <h1 class="heading-primary">
+                <span class="heading-primary--main">Edina & Zoli</span>   
+                <span class="heading-primary--sub">2020.November.28</span>             
+            </h1>
+            <a href="https://silvermajor.hu/" class="btn btn--white btn--animated" >Silver-major</a> <!--target="_blank"-->
+
+            <div class="container">
+                <h2><span></span></h2>
+                <div class="countdown">
+                    <div id="day">NA</div>
+                    <div id="hour">NA</div>
+                    <div id="minute">NA</div>
+                    <div id="second">NA</div>
+                </div>
+            </div>
+        </div>      
+
+
+
+        <!--Visszaszámláló javaScript-->
+        <script type="text/javascript">
+            var countDate = new Date('Nov 28, 2020 15:30:00').getTime();
+
+            function wedding(){
+                var now = new Date().getTime();
+                gap = countDate - now;
+
+                var second = 1000;
+                var minute = second *60;
+                var hour = minute * 60;
+                var day = hour * 24;
+
+                var d = Math.floor(gap / (day));
+                var h = Math.floor((gap % (day)) / (hour));
+                var m = Math.floor((gap % (hour)) / (minute));
+                var s = Math.floor((gap % (minute)) / (second));
+
+                document.getElementById('day').innerText = d;
+                document.getElementById('hour').innerText = h;
+                document.getElementById('minute').innerText = m;
+                document.getElementById('second').innerText = s;
+            }
+
+            setInterval(function(){
+                wedding();
+            }, 1000)
+        </script>
+
+        </header>
+
+        <main>
+            <section class="kozos-elmeny">
+                <div class="u-center-text u-margin-bottom-big">
+                    <h2 class="heading-secondary" class="heading-secondary3">
+                        &#10085; Közös élményeink &#10085;
+                    </h2>
+                </div>
+
+                <div class="row">
+                    <div class="col-1-of-2">
+                        <h3 class="heading-tertiary u-margin-bottom-small">Utazásaink és közös pihenés</h3>
+                        <p class="paragraph">
+                            Minden veled töltött utazásom legyen az, Görögország, Horvátország, Bulgária, Cyprus csodálatos és magávalragadó. <br /> Legyen ez az utazás akár világ bármely pontján is.  
+                        </p>
+                        <h3 class="heading-tertiary u-margin-bottom-small">Romantikus vacsorák és szórakozások</h3>
+                        <p class="paragraph">
+                            Akár egy étterembe romantikusan vacsorázhatok veled, vagy egy koncerten tombolhatok melletted én vagyok a világ legboldogabb embere.
+                        </p>
+                        <a href="https://www.instagram.com/p/CBqw7LTp-7k/" class="btn-elmeny">Képek &rarr;</a>   <!--target="_blank"-->
+                    </div>
+
+                    <div class="col-1-of-2">
+                        <div class="elmenykepek">
+                            <img src="images/horvat_1440x1080.jpg" alt="Photo 1" class="elmenykepek__photo elmenykepek__photo--p1">
+                            <img src="images/lagzi_1440x1080.jpg" alt="Photo 2" class="elmenykepek__photo elmenykepek__photo--p2">
+                            <img src="images/street8_1440x1080.jpg" alt="Photo 3" class="elmenykepek__photo elmenykepek__photo--p3">
+                        </div>                        
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-features">
+
+                <div class="row">
+                    <div class="col-1-of-4">
+                        <div class="feature-box">
+                            <i class="feature-box__icon icon-basic-home"></i>
+                                <h3 class="heading-tertiary u-margin-bottom-small" id="feat">Otthon</h3>
+                                <p class="feature-box__leiras">
+                                    "Az otthon ott van ahol te vagy, csak veled érzem igazán jól magam."                                
+                                </p>                            
+                        </div>                       
+                    </div>
+
+                    <div class="col-1-of-4">
+                        <div class="feature-box">
+                            <i class="feature-box__icon icon-basic-message-multiple"></i>
+                                <h3 class="heading-tertiary u-margin-bottom-small" id="feat">Szeremes SMS</h3>
+                                <p class="feature-box__leiras">
+                                    "Mikor kapok tőled egy kedves üzentet, szívem repes s válaszol neked."                                
+                                </p>                            
+                        </div>                       
+                    </div>
+
+                    <div class="col-1-of-4">
+                        <div class="feature-box">
+                            <i class="feature-box__icon icon-basic-heart"></i>
+                                <h3 class="heading-tertiary u-margin-bottom-small" id="feat">Szerelem</h3>
+                                <p class="feature-box__leiras">
+                                    "Napról napra egyre jobban szeretlek, s szeretem mikor karjaimban ölelhetlek."                                
+                                </p>                            
+                        </div>                       
+                    </div>
+
+                    <div class="col-1-of-4">
+                        <div class="feature-box">
+                            <i class="feature-box__icon icon-basic-mixer2"></i>
+                                <h3 class="heading-tertiary u-margin-bottom-small" id="feat">Összhang</h3>
+                                <p class="feature-box__leiras">
+                                    "Imádom, hogy egy húron pendülünk, s együtt bármit elérhetünk."                                
+                                </p>                          
+                        </div>                     
+                    </div>
+                </div>
+            </section>
+
+            <section class="cardTeil" id="cardTeil">
+                <div class="u-center-text u-margin-top-big">
+                    <h2 class="heading-secondary heading-secondary-fontosd">
+                        Fontos Dátumok
+                    </h2>
+                </div>
+
+                <div class="row">
+                    <div class="col-1-of-3">
+                        <div class="card">
+                            <div class="card__side card__side--front">
+                                <div class="card__picture card__picture--1">
+                                    
+                                </div>
+                                <h4 class="card__heading">
+                                    <span class="card__heading-span card__heading-span--1">Első képünk</span>
+                                </h4>
+                                <div class="card__details">
+                                    <ul>
+                                        <li>Első randi</li>
+                                        <li>Hajdúszoboszló</li>
+                                        <li>2014.09.13</li>
+                                        <li>Harangház</li>
+                                        <li>Balkán Fanatik koncert</li>                                        
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="card__side card__side--back card__side--back-1">
+                                <div class="card__data">
+                                    <div class="card__love-box">
+                                        <p class="card__love-box-line">"Mióta megismertelek, azóta szeretlek, rabul ejtett ragyogása csillogó szemednek."</p>
+                                    </div>
+                                    <a href="#popup" class="btn btn--white">Click!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-1-of-3">
+                        <div class="card">
+                            <div class="card__side card__side--front">
+                                <div class="card__picture card__picture--2">
+                                    
+                                </div>
+                                <h4 class="card__heading">
+                                    <span class="card__heading-span card__heading-span--2">Lánykérés</span>
+                                </h4>
+                                <div class="card__details">
+                                    <ul>
+                                        <li>Eljegyzés</li>
+                                        <li>Hajdúszoboszló</li>
+                                        <li>2019.01.13</li>
+                                        <li>Harangház</li>
+                                        <li>Gyűrű</li>                                        
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="card__side card__side--back card__side--back-2">
+                                <div class="card__data">
+                                    <div class="card__love-box">
+                                        <p class="card__love-box-line">"Szeretlek, jobban a szélnél, mi öleli hosszan a fát, szeretlek, egy egész életen át."</p>
+                                    </div>
+                                    <a href="#popup" class="btn btn--white">Click!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
+                    <div class="col-1-of-3">
+                        <div class="card">
+                            <div class="card__side card__side--front">
+                                <div class="card__picture card__picture--3">
+                                    
+                                </div>
+                                <h4 class="card__heading">
+                                    <span class="card__heading-span card__heading-span--3">Esküvő</span>
+                                </h4>
+                                <div class="card__details">
+                                    <ul>
+                                        <li>Lagzi</li>
+                                        <li>Hajdúszoboszló-Kaba</li>
+                                        <li>2020.11.28</li>
+                                        <li>Szilver Major</li>
+                                        <li>Buli</li>                                        
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="card__side card__side--back card__side--back-3">
+                                <div class="card__data">
+                                    <div class="card__love-box">
+                                        <p class="card__love-box-line">"Sorsunk egybeforr, együtt megyünk tovább, Az élet csodáiban Te vigyázol reám."</p>
+                                    </div>
+                                    <a href="#popup" class="btn btn--white">Click!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>                    
+                </div>
+                <div class="osszeskep">
+                    <a href="https://www.facebook.com/photo.php?fbid=2461515057240727&set=t.100001467700511&type=3" class="btn btn--osszes">Összes kép</a>
+                </div>
+            </section>
+
+            <section class="section-stories">
+                <div class="bg-video">
+                    <video class="bg-video__content" autoplay muted loop>
+                        <source src="/images/hatter.mp4" type="video/mp4">
+                        <source src="/images/hatter.webm" type="video/webm">
+                            Bongésződ nem támogatott! Kérlek frissítsd!
+                    </video>
+                </div>
+
+                <div class="u-center-text u-margin-bottom-big">
+                    <h2 class="heading-secondary" id="heading-secondary2">
+                        &#10085; Rólad és rólam &#10085;
+                    </h2>
+                </div>
+
+                <div class="row">
+                    <div class="story">
+                        <figure class="story__shape">
+                            <img src="/images/sztoriEdina2.jpg" class="story__img" alt="#">
+                            <figcaption class="story__caption">Fekete Edina</figcaption>
+                        </figure>
+                        <div class="story__text">
+                            <h3 class="heading-tertiary u-margin-bottom-small heading-three">Edina, Személyi edző és Üzletasszony.</h3>
+                            <p>Minen nap, napról napra szebb, imádja az edzést, szereti amit csinál. Okos és magávalragadó is egyben. Megbírható és szenvedélyes.</p>
+                        </div>
+                    </div>
+                </div>
+
+               
+                <div class="row">
+                    <div class="story">
+                        <figure class="story__shape">
+                            <img src="/images/sztoriZoli2.jpg" class="story__img story__img--2" alt="#" >
+                            <figcaption class="story__caption">Kocsis Zoltán</figcaption>
+                        </figure>                        
+                        <div class="story__text">
+                            <h3 class="heading-tertiary u-margin-bottom-small heading-three">zoli, Programozó.</h3>
+                            <p>Minden nap egyre jobban szeretem a szerelmem, programozás és a munka mellett a közös jövőnket építem. Mely jövőt mással nem tudnék el képzelni mint a szerelmemmel a Kicsilánnyal együtt átélni. </p>
+                        </div>
+                    </div>
+                </div>
+            </section>          
+            
+            <section class="section-book">
+                <div class="row">
+                    <div class="book">
+                        <div class="book__form">
+                            <div class="u-margin-bottom-medium">
+                                <h2 class="heading-secondary" id="irj">
+                                    Írj nekünk
+                                </h2>
+                            </div>
+
+                            <form action="#" class="form">
+                                <div class="form__group">
+                                    <input type="text" class="form__input" placeholder="Teljes név" id="name" required/>
+                                    <label for="name" class="form__label">Teljes név</label>
+                                </div>
+
+                                <div class="form__group">
+                                    <input type="email" class="form__input" placeholder="Email-cím" id="email" required/>
+                                    <label for="email" class="form__label">email-cím</label>
+                                </div>
+                                <div class="form__group">
+                                    <div class="form__radio-group ">
+                                        <input type="radio" class="form__radio-input" id="small" name="size">
+                                        <label for="small" class="form__radio-label">
+                                            <span class="form__radio-button"></span>
+                                            Üzenet Edinának
+                                        </label>
+                                    </div>
+                                    
+                                    <div class="form__radio-group ">
+                                        <input type="radio" class="form__radio-input" id="large" name="size">
+                                        <label for="large" class="form__radio-label">
+                                            <span class="form__radio-button"></span>
+                                            Üzenet Zolinak
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form__group">
+                                    <a href="#" class="elmeny-1">Elküldés &rarr;</a>
+                                    
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer__logo-box">
+                <img src="/images/love-icon-png-9.jpg" alt="Footer logo" class="footer__logo">
+            </div>
+            <div class="row">
+                <div class="col-1-of-2">
+                    <div class="footer__navigation">
+                        <ul class="footer__list">
+                            <li class="footer__item"><a href="#" class="footer__link">Cím</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link">Telefonszám</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link">Email-cím</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link">Kapcsolat</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link">Egyéb</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-1-of-2">
+                    <p class="footer__copyright">
+                            This web page was made for my <a href="#" class="footer__link">bride for a surprise</a>. <br />
+                            <!--Web Page editor <a href="#" class="footer__link"> Zoltan Kocsis</a>.-->
+                            This is wedding webpage. Web Page editor &copy; by <a href="#" class="footer__link">Zoltan Kocsis</a>.<br /> Some Function does not working yet. It will be apply in the future. <br /> Copyright - &copy; 2020
+                    </p>
+                </div>                
+            </div>
+        </footer>
+
+
+        <div class="popup" id="popup">
+            <div class="popup__content">
+                <div class="popup__left">
+                    <img src="/images/pop1.jpg" alt="Photo Popup1" class="popup__img">
+                    <img src="/images/pop2.jpg" alt="Photo Popup2" class="popup__img">
+                </div>
+                <div class="popup__right">
+                    <a href="#cardTeil" class="popup__close">&times;</a>
+                    <h2 class="heading-secondary u-margin-bottom-small">Közös képek</h2>
+                    <h3 class="heading-tertiary u-margin-bottom-small">Rólunk &ndash; néhény közös pillanat</h3>
+                    <p class="popup__text">
+                        Szemem a szemedbe néz,<br /> remeg a lábam mint egy falevél.<br />
+                        Ha szemedbe nézek látok mindet,<br /> nem kell mondanod semmit nekem.<br />
+                        Csókommal elmondom, neked mit is jelentesz nekem,<br /> így érezni és tudni fogod, mennyit jelentesz nekem.<br /> <br />
+                        Minden percben rád gondolok,<br /> éjjel is csak rólad álmodok.<br /> 
+                        Szeretlek téged én egyetlen kincsem,<br /> veled teljes az életem. Ha nem vagy velem, nem találom a helyemet.<br />
+                        Azért írtam ezt a kis verset,<br /> hogy elmondjam neked, Szeretlek én egyetlen szerelmem!!
+                    </p>
+                    <!--<a href="#" class="btn btn--green">Facebook</a>-->
+                </div>
+            </div>
+        </div>
+
+
+        
+
+
+
+
+            <!--
+    <section class="grid-test">
+        <div class="row">
+            <div class="col-1-of-2">
+                Col 1 of 2
+            </div>
+            <div class="col-1-of-2">
+                Col 1 of 2
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-1-of-3">
+                Col 1 of 3
+            </div>
+            <div class="col-1-of-3">
+                Col 1 of 3
+            </div>
+            <div class="col-1-of-3">
+                Col 1 of 3
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-1-of-3">
+                Col 1 of 3
+            </div>
+            <div class="col-2-of-3">
+                Col 1 of 2
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-1-of-4">
+                Col 1 of 4
+            </div>
+            <div class="col-1-of-4">
+                Col 1 of 4
+            </div>
+            <div class="col-1-of-4">
+                Col 1 of 4
+            </div>
+            <div class="col-1-of-4">
+                Col 1 of 4
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-1-of-4">
+                Col 1 of 4
+            </div>
+            <div class="col-1-of-4">
+                Col 1 of 4
+            </div>
+            <div class="col-2-of-4">
+                Col 2 of 4
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-1-of-4">
+                Col 1 of 4
+            </div>
+            <div class="col-3-of-4">
+                Col 3 of 2
+            </div>
+        </div>
+	-->
+
+
+
+    </body>
+</html>
