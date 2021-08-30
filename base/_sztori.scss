@@ -1,0 +1,155 @@
+
+$colorprimary: #55c57a;
+$color-primary-light: #7ed56f;
+$color-primary-dark: #28b485;
+
+$color-secondary-light: #ffb900;
+$color-secondary-dark: #ff7730;
+
+$color-tertiary-light: #2998ff;
+$color-tertiary-dark: #5643fa;
+
+$color-grey-light-1: #f7f7f7;
+$color-grey-light-2: #eee;
+
+
+$color-gray-dark: #777;
+$color-white: #fff;
+$color-black: #000;
+$box-shadow:0 1.5rem 4rem rgba(#000, .15);
+
+
+.u-center-text {
+    text-align: center;
+}
+
+.u-margin-bottom-small{
+    margin-bottom: 1rem;
+}
+
+.u-margin-bottom-medium{
+    margin-bottom: 4rem;
+}
+
+.u-margin-bottom-big{
+    margin-bottom: 4rem;
+}
+
+/*.u-margin-top-big{
+    margin-top: 15rem;
+}*/
+
+
+.u-margin-top-huge{
+    margin-top: 10rem;}
+
+.heading-secondary2{
+    margin-bottom: 5rem;
+}
+
+.section-stories{
+    position: relative;
+    padding: 10rem 0;
+    //background-color: $color-grey-light-1;
+}
+
+.story{
+    width: 75%;
+    margin: 0 auto;
+    box-shadow: 0 3rem 6rem rgba($color-black, .1);
+    background-color: rgba($color-white, .6);
+    border-radius: 3px;
+    padding: 6rem;
+    padding-left: 12rem;
+    font-size: $default-font-size;
+    transform: skewX(-12deg);
+
+    @include respond(tab-port){
+        width: 100%;
+        padding: 4rem;
+        padding-left: 7rem;
+    }
+
+    @include respond(phone){
+        transform: skewX(0);
+    }
+
+
+    
+
+    &__shape{
+        width: 12rem;
+        height: 12rem;
+        //background-color: orangered;                            
+        float: left;
+        shape-outside: circle(35% at 35% 50%);    //50                  
+        clip-path: circle(46% at 46% 50%);    
+        overflow: hidden;        
+
+        transform: translateX(-3rem) skewX(12deg);
+        position: relative;
+
+        @include respond(tab-port){
+            clip-path: circle(31% at 47% 54%);
+        }
+        
+        @include respond(phone){
+            transform: translateX(-3rem) skewX(0);
+        }
+        @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)){
+            -webkit-clip-path: circle(46% at 46% 50%);
+            clip-path: circle(46% at 46% 50%);
+            height: 12rem;
+        }   
+               
+    }
+
+    &__img{  
+        height: 100%;    
+        transform: translateX(-2rem) scale(1.4);
+        backface-visibility: hidden;
+        transition: all .5s;  
+        
+        
+        &--2{
+            height: 120%;
+            //transform: translateX(-2rem) scale(1.4);            
+        }
+
+    }
+
+    &__text{
+        transform: skewX(12deg);
+
+        @include respond(phone){
+            transform: skewX(0);
+        }
+
+
+    }
+
+    &__caption{
+        position: absolute;
+        top: 52%;
+        left: 48%;
+        transform: translate(-50%, 20%);
+        color: $color-white;
+        text-transform: uppercase;
+        font-size: 1.7rem;
+        text-align: center;
+        opacity: 0;
+        transition: all .5s;
+        backface-visibility: hidden;
+    }
+
+        &:hover &__caption{
+        opacity: 1;
+        transform: translate(-50%, -50%);
+
+    }
+
+    &:hover &__img{
+        transform: translateX(-2rem) scale(1);
+        filter: blur(3px) brightness(80%);
+    }
+}

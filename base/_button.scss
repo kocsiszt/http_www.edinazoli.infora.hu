@@ -1,0 +1,100 @@
+$color-powder:antiquewhite;
+$default-font-size :1.6rem;
+$color-kepek-btn:#19b0bb;
+$color-elmeny:#6eb6f5;
+
+.btn {    
+    &,
+    &:link,
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 4rem;
+        display: inline-block;
+        border-radius: 10rem;
+        transition: all .2s;
+        position: relative;
+        animation: moveUp 2s ease-out;
+        font-size: 2rem;
+
+        //Csere a radio buttom miatt
+        border: none;
+        cursor: pointer;
+    }
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+
+        &::after{
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
+    }
+
+    &:active,
+    &:focus {
+        outline: none;
+        transform: translateY(-1px);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+    }
+
+    &--white {
+        color: $color-powder;
+        background-color: rgba(255, 255, 255, 0.146);
+
+        &::after {
+            background-color: rgba(250, 235, 215, 0.146);           
+        }
+    }
+
+    &--osszes{
+        background-color: #f3d7b1;        
+    }
+
+    &::after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 10rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .4s;
+    }
+
+
+
+    &--animated{
+        animation: moveInBottom .5s ease-out .75s;
+        animation-fill-mode: backwards;
+    }
+}
+
+.btn-elmeny{
+    &:link,
+    &:visited{
+        font-size: $default-font-size;
+        color: $color-kepek-btn;
+        display: inline;
+        text-decoration: none;
+        border-bottom: 1px solid $color-kepek-btn;
+        padding: 3px;
+        transition: all .2s;
+    }
+
+    &:hover{
+        background-color: $color-elmeny;
+        color: $color-powder;
+        box-shadow: 0 1rem 2rem rgba(#000, .15);
+        transform: translateY(-4px);
+    }
+
+    &:active{
+        box-shadow:.5rem 1rem rgba(#b6d4fb, .15);
+        transform: translateY(-2px);
+    }
+}
+
